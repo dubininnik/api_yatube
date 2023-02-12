@@ -13,11 +13,6 @@ router.register(
     CommentViewSet,
     basename="comments"
 )
-router.register(
-    r'posts/(?P<post_id>\d+)/comments/(?P<comment_id>\d+)',
-    CommentViewSet,
-    basename='comment_detail'
-)
 
 urlpatterns = [
     path('v1/api-token-auth/', views.obtain_auth_token),
